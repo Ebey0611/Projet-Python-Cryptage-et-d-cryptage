@@ -29,5 +29,5 @@ class Sommet(ArbreB) :
         super().__init__(s_arbreg, s_arbred, valeur)
         self.label = label
 
-    def modification(self, new) :
-        self.label = new 
+    def modification(self, new_label) :
+        self.label = new_label
