@@ -11,14 +11,14 @@ class ArbreB:
         if self.est_vide():
             return False
 
-        if e == self.valeur:
+        elif e == self.valeur:
             return True
 
-        if self.s_arbreg is not None:
+        elif self.s_arbreg is not None:
             if self.s_arbreg.recherche(e):
                 return True
 
-        if self.s_arbred is not None:
+        elif self.s_arbred is not None:
             if self.s_arbred.recherche(e):
                 return True
 
