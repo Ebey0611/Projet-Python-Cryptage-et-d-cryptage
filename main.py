@@ -23,6 +23,9 @@ class ArbreB:
                 return True
 
         return False
+    
+    def insertion(self, val) :
+        pass
 
 class Sommet(ArbreB) :
     def __init__(self, s_arbreg, s_arbred, valeur, label):
