@@ -26,6 +26,24 @@ class ArbreB:
     
     def insertion(self, val) :
         pass
+    
+     def dessiner_arbre(self, canvas, x, y, rayon):
+        canvas.create_oval(x-rayon, y-rayon, x+rayon, y+rayon, fill="white", width=2)
+        canvas.create_text(x, y, text=str(self.valeur))
+
+        # Dessiner le sous-arbre gauche
+        if self.s_arbreg is not None:
+            x_gauche = x - 3*rayon
+            y_gauche = y + 3*rayon
+            canvas.create_line(x, y+rayon, x_gauche+rayon, y_gauche-rayon, width=2)
+            self.s_arbreg.dessiner_arbre(canvas, x_gauche, y_gauche, rayon)
+
+        # Dessiner le sous-arbre droit
+        if self.s_arbred is not None:
+            x_droit = x + 3*rayon
+            y_droit = y + 3*rayon
+            canvas.create_line(x, y+rayon, x_droit-rayon, y_droit-rayon, width=2)
+            self.s_arbred.dessiner_arbre(canvas, x_droit, y_droit, rayon)
 
 class Sommet(ArbreB) :
     def __init__(self, s_arbreg, s_arbred, valeur, label):
