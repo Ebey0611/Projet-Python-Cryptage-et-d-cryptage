@@ -27,7 +27,7 @@ class ArbreB:
     def insertion(self, val) :
         pass
     
-     def dessiner_arbre(self, canvas, x, y, rayon):
+    def dessiner_arbre(self, canvas, x, y, rayon):
         canvas.create_oval(x-rayon, y-rayon, x+rayon, y+rayon, fill="white", width=2)
         canvas.create_text(x, y, text=str(self.valeur))
 
